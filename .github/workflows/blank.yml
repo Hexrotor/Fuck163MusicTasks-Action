@@ -20,7 +20,7 @@ jobs:
         run: |
           # Hiding
           echo "::add-mask::$NICKNAME"
-          echo "$CONFIG" > config.json
+          echo "$CONFIG"|base64 -d > config.json
       - name: Run Fuck163MusicTasks
         run: |
           ./Fuck163MusicTasks_linux_amd64
